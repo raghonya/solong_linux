@@ -23,20 +23,19 @@ int	close_map(int key, t_mlx *mlx)
 	static int	count;
 	char		*s;
 
-	if (key == 53)
+	if (key == 65307)
 	{
 		mlx_destroy_window(mlx->mlx, mlx->win);
 		exit(0);
 	}
-	else if (key == 119)
+	else if (key == 119 || key == 65362)
 		to_up(mlx, &count);
-	else if (key == 100)
+	else if (key == 100 || key == 65363)
 		to_right(mlx, &count);
-	else if (key == 115)
+	else if (key == 115 || key == 65364)
 		to_down(mlx, &count);
-	else if (key == 97)
+	else if (key == 97 || key == 65361)
 		to_left(mlx, &count);
-	ft_printf ("%d\n", key);
 	mlx_put_image_to_window(mlx->mlx, mlx->win, mlx->w.icon, 0, 0);
 	s = ft_itoa(count);
 	mlx_string_put(mlx->mlx, mlx->win, 0, 10, 0x00FF0000, s);

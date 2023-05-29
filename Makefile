@@ -12,7 +12,7 @@
 
 NAME	=	so_long
 
-CFLAGS	=	#-Wall -Wextra -Werror
+CFLAGS	=	-fsanitize=address #-Wall -Wextra -Werror
 
 LIB		=	libft/libft.a
 
